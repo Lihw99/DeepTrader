@@ -94,7 +94,7 @@ DeepTrader/
 本地 Parquet: /mnt/d/A股全数据260320/个股日线/
 文件格式:     {ts_code}_{start}_{end}.parquet（如 000001.SZ_20200101_20260320.parquet）
 Tushare URL:  http://121.40.135.59:8010/
-Token:        zVqthiTTyQpJhOzfCdKfgRZTFHCEbMRKtdUUnDUTqBAKrzXwPAdOskmccOGLDQfb
+Token:      --你自己的
 复权方式:     前复权（默认）
 ```
 
