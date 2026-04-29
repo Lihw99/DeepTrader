@@ -199,7 +199,7 @@ def _load_tushare(stock_code: str, start_date: str, end_date: str, adjust: str =
             token = "你的token"
 
         pro = ts.pro_api(token)
-        pro._DataApi__http_url = "http://121.40.135.59:8010/"
+        pro._DataApi__http_url = "接入自己的url"
 
         # Tushare pro.daily 接受完整代码如 "000001.SZ"
         df = pro.daily(
@@ -633,7 +633,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
             df = pro.index_weight(index_code=ts_index)
             if df is not None and not df.empty:
                 return df["con_code"].tolist()
@@ -691,7 +691,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
             if count:
                 end_date = pd.Timestamp.today().strftime("%Y%m%d")
                 start_date = (pd.Timestamp.today() - pd.Timedelta(days=count*2)).strftime("%Y%m%d")
@@ -808,7 +808,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
             df = pro.stock_basic(ts_code=self.normalize_code(security), fields="list_date")
             if df is not None and not df.empty:
                 list_date = str(df.iloc[0]["list_date"])
@@ -841,7 +841,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
             df = pro.stock_basic(ts_code=security, fields="list_date,delist_date,is_hs,name")
             if df is not None and not df.empty:
                 row = df.iloc[0]
@@ -880,7 +880,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
 
             # Tushare daily_basic 提供 PE/PB/市值
             if count:
@@ -965,7 +965,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
 
             # 获取利润表
             df = pro.fina_indicator(ts_code=security, start_date=start_date, end_date=end_date)
@@ -997,7 +997,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
 
             if count:
                 end_dt = pd.Timestamp.today().strftime("%Y%m%d")
@@ -1033,7 +1033,7 @@ class JQStrategy(bt.Strategy):
             import tushare as ts
             token = "你的token"
             pro = ts.pro_api(token)
-            pro._DataApi__http_url = "http://121.40.135.59:8010/"
+            pro._DataApi__http_url = "接入自己的url"
 
             if count:
                 end_dt = pd.Timestamp.today().strftime("%Y%m%d")
